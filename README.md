@@ -1,42 +1,45 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/azure.webapp.deployment.slot.create.svg?branch=master)](https://travis-ci.org/opspec-pkgs/azure.webapp.deployment.slot.create)
 
+<img src="icon.svg" alt="icon" height="100px">
+
 # Problem statement
 
 create an azure webapp deployment slot
 
+# Format
+
+this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html) format
+
 # Example usage
 
-> note: in examples, VERSION represents a version of the
-> azure.webapp.deployment.slot.create pkg
-
-## install
+## Install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/azure.webapp.deployment.slot.create#VERSION
+opctl pkg install github.com/opspec-pkgs/azure.webapp.deployment.slot.create#1.0.0
 ```
 
-## run
+## Run
 
 ```
-opctl run github.com/opspec-pkgs/azure.webapp.deployment.slot.create#VERSION
+opctl run github.com/opspec-pkgs/azure.webapp.deployment.slot.create#1.0.0
 ```
 
-## compose
+## Compose
 
 ```yaml
 op:
-  pkg: { ref: github.com/opspec-pkgs/azure.webapp.deployment.slot.create#VERSION }
-  inputs: 
+  pkg: { ref: github.com/opspec-pkgs/azure.webapp.deployment.slot.create#1.0.0 }
+  inputs:
     subscriptionId:
     loginId:
     loginSecret:
     name:
     resourceGroup:
+    # params w/ default
     slot:
-    # begin optional args
+    configurationSource:
     loginTenantId:
     loginType:
-    # end optional args
 ```
 
 # Support
